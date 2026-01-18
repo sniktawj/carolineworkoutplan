@@ -15,7 +15,7 @@ current_day = st.sidebar.number_input("Current Cycle Day", min_value=1, max_valu
 
 # --- 2. LOAD YOUR PLAN ---
 # Reads the sheet shown in your screenshot
-plan_df = conn.read(worksheet="Workouts", ttl=0) 
+plan_df = conn.read(worksheet="Sheet1", ttl=0) 
 today_plan = plan_df[plan_df['Cycle Day'] == current_day]
 
 if not today_plan.empty:
